@@ -6,15 +6,6 @@ public class TicketProcessing {
     private String created;
     private String priority;
     private String watchers;
-
-    public String getWatchers() {
-        return watchers;
-    }
-
-    public void setWatchers(String watchers) {
-        this.watchers = watchers;
-    }
-
     private String application;
     private String summary;
     private String description;
@@ -67,6 +58,14 @@ public class TicketProcessing {
 
     public void setPriority(String priority) {
         this.priority = priority;
+    }
+
+    public String getWatchers() {
+        return watchers;
+    }
+
+    public void setWatchers(String watchers) {
+        this.watchers = watchers;
     }
 
     public String getApplication() {

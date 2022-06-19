@@ -1,4 +1,6 @@
+import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 import java.io.IOException;
@@ -10,6 +12,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 public class JacksonTest {
     ClassLoader classLoader = JacksonTest.class.getClassLoader();
 
+    @DisplayName("Checking Json for one entry")
     @Test
     void jsonTestFromClass() throws IOException {
         InputStream is = classLoader.getResourceAsStream("ticketProcessing.json");
@@ -35,5 +38,24 @@ public class JacksonTest {
 
     }
 
+
+    @Test
+    void jsonArrayFromClass() throws IOException {
+        InputStream is = classLoader.getResourceAsStream("ArrayTicketProcessing.json");
+        ObjectMapper objectMapper = new ObjectMapper();
+        JsonNode jsonObject = objectMapper.readTree(new InputStreamReader(is));
+        assertThat(jsonObject.withArray("TicketProcessing").findValuesAsText("ticketNumber"))
+                .contains("T-78945");
+        assertThat(jsonObject.withArray("TicketProcessing").findValuesAsText("surname"))
+                .contains("Klaus");
+        assertThat(jsonObject.withArray("TicketProcessing").findValuesAsText("lastname"))
+                .contains("Kaiser");
+        assertThat(jsonObject.withArray("TicketProcessing").findValuesAsText("address"))
+                .contains("Fox Street,89");
+        assertThat(jsonObject.withArray("TicketProcessing").findValuesAsText("status"))
+                .contains("In Progress");
+
+
+    }
 
 }

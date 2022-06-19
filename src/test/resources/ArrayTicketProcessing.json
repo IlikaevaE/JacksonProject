@@ -1,0 +1,36 @@
+{
+  "TicketProcessing": [
+    {
+      "ticketNumber": "T-78945",
+      "surname": "Monika",
+      "lastname": "Krusche",
+      "address": {
+        "streetAddress": "Bremen Street,15",
+        "city": "Bremen",
+        "country": "Germany",
+        "postalCode": "1245689"
+      },
+      "created": "12.06.2022",
+      "priority": "low",
+      "watchers": "Elena,Ilikaeva",
+      "application": "Jira",
+      "summary": "No rights to start the sprint",
+      "description": "Dear Support, I need the permission to start/close the sprint in the project ABC. Best regards, Monika",
+      "solution": "Dear Monika, thank you for your request. the needed permission has been added to your account. Please try staring the sprints. Best regards, Your Support.",
+      "status": "Done"
+    },
+    {
+    "ticketNumber": "T-78946",
+    "surname": "Klaus",
+    "lastname": "Kaiser",
+    "address": "Fox Street,89",
+    "created": "Paris",
+    "priority": "critical",
+    "watchers": "Klaus,Kaiser",
+    "application": "Jira",
+    "summary": "Please call me back",
+    "description": "Dear colleagues, I need the technical support. Please call me asap at +75896589. Thanks",
+    "solution": null,
+    "status": "In Progress"
+    }
+  ]}
