@@ -12,7 +12,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 public class JacksonTest {
     ClassLoader classLoader = JacksonTest.class.getClassLoader();
 
-    @DisplayName("Checking Json for one entry")
+    @DisplayName("1 - Simple Json")
     @Test
     void jsonTestFromClass() throws IOException {
         InputStream is = classLoader.getResourceAsStream("ticketProcessing.json");
@@ -38,7 +38,7 @@ public class JacksonTest {
 
     }
 
-
+    @DisplayName("2 - Array Json")
     @Test
     void jsonArrayFromClass() throws IOException {
         InputStream is = classLoader.getResourceAsStream("ArrayTicketProcessing.json");
